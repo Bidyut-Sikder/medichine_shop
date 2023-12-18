@@ -61,9 +61,9 @@ app.use('/api/v1', router)
 // })
 
 
-// app.use('*', async (req, res) => {
-//   res.status(404).json({ message: 'Not Found' })
-// })
+app.use('*', async (req, res) => {
+  res.status(404).json({ message: 'Not Found' })
+})
 
 //error handler here
 function errorHandler(err, req, res, next) {
